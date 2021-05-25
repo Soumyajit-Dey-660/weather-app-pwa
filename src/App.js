@@ -14,13 +14,15 @@ const App = () => {
     }
     return (
         <div className='main-container'>
-            <input 
-                type='text'
-                className='search'
-                value={city}
-                onChange={e => setCity(e.target.value)}
-                onKeyPress={search}
-            />
+            <label>
+                <input 
+                    type='text'
+                    className='search'
+                    value={city}
+                    onChange={e => setCity(e.target.value)}
+                    onKeyPress={search}
+                />
+            </label>
             {weather.main && (
                 <div className='city'>
                     <h2 className='city-name'>
